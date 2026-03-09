@@ -1,2 +1,7 @@
 # Composite-project
 Literature-Calibrated Lifecycle Digital Twin for 3D Woven/Braided Composites
+Three-dimensional woven and braided composites are increasingly used in aerospace structures due to their high structural efficiency, superior impact resistance, and enhanced delamination tolerance. However, their complex textile architecture introduces strong interactions between reinforcement geometry, manufacturing processes, defect formation, and structural performance. These interactions create challenges in predicting structural reliability and certification performance.
+
+This study presents a lifecycle digital twin framework for textile composites that integrates architecture design parameters, manufacturing defect prediction, and structural performance modelling within a unified simulation environment. A reduced-order computational model is implemented to simulate relationships between textile architecture variables, process parameters, defect formation, and mechanical performance metrics including compression-after-impact (CAI) strength and fatigue resistance.
+
+Monte Carlo simulation is performed to explore the composite design space and generate statistical performance distributions. Sensitivity analysis identifies the most influential design variables affecting structural performance. The digital twin framework enables predictive modelling of composite behaviour prior to manufacturing, supporting improved design optimization and certification strategies.
