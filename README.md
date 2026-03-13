@@ -1,611 +1,129 @@
-# Lifecycle Digital Twin Framework for 3D Woven and Braided Composites
+# Probabilistic Digital Twin Framework for 3D Woven and Braided Composites
 
-A simulation-based framework linking textile architecture, manufacturing defects, and structural performance of advanced composite materials.
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+A simulation-based digital twin framework linking textile architecture, manufacturing defects, and structural performance of advanced composite materials. This repository contains the code used in the research study:
+
+**Mahin, S. H. (2026).** *Probabilistic Digital Twin Framework for 3D Woven and Braided Composites: Linking Textile Architecture, Manufacturing Defects, and Structural Performance.*
 
 ---
 
 ## Overview
 
-This repository contains the simulation code used in the research study:
+The framework integrates four core modelling modules to capture the influence of manufacturing variability on composite performance:
 
-**Shadat Hossen Mahin (2026)**
-*Lifecycle Digital Twin Framework for 3D Woven and Braided Composites: Linking Textile Architecture, Manufacturing Defects, and Structural Performance.*
+1. **Textile Architecture Model**  
+   – Fiber volume fraction, binder density, waviness, braid angle, thickness.
 
-The framework models how **textile architecture and manufacturing variability influence defect formation and structural performance** in aerospace composite materials.
+2. **Manufacturing Process Model**  
+   – Compaction pressure, resin flow rate, cure temperature deviation.
 
-The simulation integrates:
+3. **Defect Prediction Model**  
+   – Void fraction, resin‑rich regions, waviness amplification, defect severity index.
 
-* Textile architecture modelling
-* Manufacturing process modelling
-* Defect prediction
-* Structural performance prediction
-* Monte Carlo uncertainty propagation
-* Sensitivity analysis
-* Reliability analysis
+4. **Structural Performance Model**  
+   – Undamaged compressive strength, Compression‑After‑Impact (CAI) strength, fatigue knockdown.
 
-The repository allows researchers to reproduce the simulation workflow and regenerate the figures and datasets used in the study.
-
----
-
-## Digital Twin Workflow
-
-The framework consists of four main modules:
-
-### 1. Textile Architecture Model
-
-Parameters describing composite architecture:
-
-* Fiber volume fraction
-* Binder yarn density
-* Fiber waviness
-* Braid angle
-* Laminate thickness
-
-These parameters represent structural variability in 3D woven composites.
-
----
-
-### 2. Manufacturing Process Model
-
-Process parameters representing manufacturing conditions:
-
-* Compaction pressure
-* Resin flow rate
-* Cure temperature deviation
-
-These variables influence the formation of defects during composite manufacturing.
-
----
-
-### 3. Defect Prediction Model
-
-The framework predicts several types of defects:
-
-* Void fraction
-* Resin-rich regions
-* Fiber waviness amplification
-* Overall defect severity index
-
-These defects significantly influence structural performance.
-
----
-
-### 4. Structural Performance Model
-
-Structural properties predicted by the model include:
-
-* Undamaged compressive strength
-* Compression-After-Impact (CAI) strength
-* Fatigue strength
-
-These predictions allow evaluation of composite performance and reliability.
-
----
-
-## Monte Carlo Simulation
-
-Uncertainty in architecture and manufacturing parameters is propagated using **Monte Carlo simulation**.
-
-The simulation typically runs **3000 samples** to estimate statistical distributions of predicted properties.
+Uncertainty is propagated through a **Monte Carlo simulation** (typically 3000 samples), enabling sensitivity analysis, reliability assessment, and validation against experimental literature.
 
 ---
 
 ## Repository Structure
 
 ```
-Composite-project
-│
-├── digital_twin_simulation.py
-├── README.md
-├── requirements.txt
-├── LICENSE
-│
-├── figures/
-│
-├── data/
-│
-├── tables/
-│
-├── validation/
-│
-└── example_results/
+.
+├── digital_twin_simulation.py   # Main simulation script
+├── README.md                    # This file
+├── requirements.txt             # Python dependencies
+├── LICENSE                      # MIT License
+├── digital_twin_literature_results/   # Auto‑generated output folder
+│   ├── figures/                  # PNG figures
+│   ├── data/                     # CSV simulation results
+│   ├── tables/                    # LaTeX tables
+│   └── validation/                # JSON validation metrics
+└── example_outputs/               # Sample outputs (optional)
 ```
 
 ---
 
 ## Requirements
 
-The simulation requires **Python 3.9 or newer**.
+- Python **3.9 or newer**
+- Required libraries: `numpy`, `scipy`, `matplotlib`
 
-Install required packages using:
-
-```
-pip install -r requirements.txt
-```
-
-Main dependencies:
-
-* numpy
-* scipy
-* matplotlib
-* tabulate
-
----
-
-## Running the Simulation
-
-Run the simulation using:
-
-```
-python digital_twin_simulation.py
-```
-
-The script will automatically:
-
-1. Generate architecture parameters
-2. Generate manufacturing parameters
-3. Predict manufacturing defects
-4. Predict structural performance
-5. Perform sensitivity analysis
-6. Perform reliability analysis
-7. Generate figures and tables
-
----
-
-## Output
-
-The simulation produces several outputs.
-
-### Figures
-
-* Void fraction vs CAI strength
-* Defect severity vs fatigue knockdown
-* CAI strength distribution
-* Sensitivity ranking of parameters
-* Reliability distribution
-
-### Data Files
-
-CSV and JSON files containing:
-
-* simulation results
-* summary statistics
-* sensitivity analysis results
-* validation metrics
-
-### Tables
-
-Publication-ready tables for journal manuscripts.
-
----
-
-## Reproducibility
-
-The code in this repository enables reproduction of the simulation workflow described in the associated research study.
-
-All figures and datasets can be regenerated using the provided scripts and default parameters.
-
----
-
-## Citation
-
-If you use this code in your research, please cite:
-
-Mahin, S. H. (2026).
-*Lifecycle Digital Twin Framework for 3D Woven and Braided Composites: Linking Textile Architecture, Manufacturing Defects, and Structural Performance.*
-
-GitHub repository:
-https://github.com/shadatmahin17/Composite-project
-
----
-
-## License
-
-This project is released under the MIT License.
-
----
-
-## Author
-
-**Shadat Hossen Mahin**
-Department of Textile Engineering
-Research Area: Aerospace Composite Structures
-2026
-# Lifecycle Digital Twin Framework for 3D Woven and Braided Composites
-
-A simulation-based framework linking textile architecture, manufacturing defects, and structural performance of advanced composite materials.
-
----
-
-## Overview
-
-This repository contains the simulation code used in the research study:
-
-**Shadat Hossen Mahin (2026)**
-*Lifecycle Digital Twin Framework for 3D Woven and Braided Composites: Linking Textile Architecture, Manufacturing Defects, and Structural Performance.*
-
-The framework models how **textile architecture and manufacturing variability influence defect formation and structural performance** in aerospace composite materials.
-
-The simulation integrates:
-
-* Textile architecture modelling
-* Manufacturing process modelling
-* Defect prediction
-* Structural performance prediction
-* Monte Carlo uncertainty propagation
-* Sensitivity analysis
-* Reliability analysis
-
-The repository allows researchers to reproduce the simulation workflow and regenerate the figures and datasets used in the study.
-
----
-
-## Digital Twin Workflow
-
-The framework consists of four main modules:
-
-### 1. Textile Architecture Model
-
-Parameters describing composite architecture:
-
-* Fiber volume fraction
-* Binder yarn density
-* Fiber waviness
-* Braid angle
-* Laminate thickness
-
-These parameters represent structural variability in 3D woven composites.
-
----
-
-### 2. Manufacturing Process Model
-
-Process parameters representing manufacturing conditions:
-
-* Compaction pressure
-* Resin flow rate
-* Cure temperature deviation
-
-These variables influence the formation of defects during composite manufacturing.
-
----
-
-### 3. Defect Prediction Model
-
-The framework predicts several types of defects:
-
-* Void fraction
-* Resin-rich regions
-* Fiber waviness amplification
-* Overall defect severity index
-
-These defects significantly influence structural performance.
-
----
-
-### 4. Structural Performance Model
-
-Structural properties predicted by the model include:
-
-* Undamaged compressive strength
-* Compression-After-Impact (CAI) strength
-* Fatigue strength
-
-These predictions allow evaluation of composite performance and reliability.
-
----
-
-## Monte Carlo Simulation
-
-Uncertainty in architecture and manufacturing parameters is propagated using **Monte Carlo simulation**.
-
-The simulation typically runs **3000 samples** to estimate statistical distributions of predicted properties.
-
----
-
-## Repository Structure
-
-```
-Composite-project
-│
-├── digital_twin_simulation.py
-├── README.md
-├── requirements.txt
-├── LICENSE
-│
-├── figures/
-│
-├── data/
-│
-├── tables/
-│
-├── validation/
-│
-└── example_results/
-```
-
----
-
-## Requirements
-
-The simulation requires **Python 3.9 or newer**.
-
-Install required packages using:
-
-```
-pip install -r requirements.txt
-```
-
-Main dependencies:
-
-* numpy
-* scipy
-* matplotlib
-* tabulate
-
----
-
-## Running the Simulation
-
-Run the simulation using:
-
-```
-python digital_twin_simulation.py
-```
-
-The script will automatically:
-
-1. Generate architecture parameters
-2. Generate manufacturing parameters
-3. Predict manufacturing defects
-4. Predict structural performance
-5. Perform sensitivity analysis
-6. Perform reliability analysis
-7. Generate figures and tables
-
----
-
-## Output
-
-The simulation produces several outputs.
-
-### Figures
-
-* Void fraction vs CAI strength
-* Defect severity vs fatigue knockdown
-* CAI strength distribution
-* Sensitivity ranking of parameters
-* Reliability distribution
-
-### Data Files
-
-CSV and JSON files containing:
-
-* simulation results
-* summary statistics
-* sensitivity analysis results
-* validation metrics
-
-### Tables
-
-Publication-ready tables for journal manuscripts.
-
----
-
-## Reproducibility
-
-The code in this repository enables reproduction of the simulation workflow described in the associated research study.
-
-All figures and datasets can be regenerated using the provided scripts and default parameters.
-
----
-
-## Citation
-
-If you use this code in your research, please cite:
-
-Mahin, S. H. (2026).
-*Lifecycle Digital Twin Framework for 3D Woven and Braided Composites: Linking Textile Architecture, Manufacturing Defects, and Structural Performance.*
-
-GitHub repository:
-https://github.com/shadatmahin17/Composite-project
-
----
-
-## License
-
-This project is released under the MIT License.
-
----
-
-## Author
-
-**Shadat Hossen Mahin**
-Department of Textile Engineering
-Research Area: Aerospace Composite Structures
-2026
-# Lifecycle Digital Twin Framework for 3D Woven and Braided Composites
-
-Simulation framework linking textile architecture, manufacturing defects, and structural performance of advanced composite materials.
-
----
-
-## Overview
-
-This repository contains the simulation code used in the research study:
-
-**Mahin, S. H. (2026)**
-*Lifecycle Digital Twin Framework for 3D Woven and Braided Composites: Linking Textile Architecture, Manufacturing Defects, and Structural Performance.*
-
-The framework models the interaction between:
-
-* Textile architecture parameters
-* Manufacturing process variability
-* Defect formation mechanisms
-* Structural performance of composite materials
-
-The simulation uses **Monte Carlo uncertainty propagation** and **reduced-order empirical models informed by literature** to estimate the reliability and performance of 3D woven composite structures.
-
-The repository allows researchers to reproduce the simulation workflow and regenerate all figures and datasets used in the study.
-
----
-
-## Digital Twin Workflow
-
-The framework integrates multiple modelling modules:
-
-1. **Textile Architecture Model**
-
-   * Fiber volume fraction
-   * Binder yarn density
-   * Fiber waviness
-   * Braid angle
-   * Laminate thickness
-
-2. **Manufacturing Process Model**
-
-   * Compaction pressure
-   * Resin flow rate
-   * Cure temperature deviation
-
-3. **Defect Prediction Model**
-
-   * Void fraction
-   * Resin-rich regions
-   * Fiber waviness amplification
-   * Overall defect severity index
-
-4. **Structural Performance Model**
-
-   * Undamaged compressive strength
-   * Compression-After-Impact (CAI) strength
-   * Fatigue strength prediction
-
-5. **Analysis Modules**
-
-   * Monte Carlo uncertainty propagation
-   * Sensitivity analysis
-   * Reliability analysis
-   * Validation against literature benchmarks
-
----
-
-## Repository Structure
-
-```
-digital-twin-3d-composites
-│
-├── digital_twin_simulation.py
-├── README.md
-├── requirements.txt
-├── LICENSE
-│
-├── digital_twin_journal_results/
-│   ├── figures/
-│   ├── data/
-│   ├── tables/
-│   └── validation/
-│
-└── example_outputs/
-```
-
----
-
-## Requirements
-
-Python 3.9 or newer is recommended.
-
-Required libraries:
-
-* numpy
-* scipy
-* matplotlib
-
-Install dependencies using:
+Install dependencies with:
 
 ```bash
-pip install numpy scipy matplotlib
+pip install -r requirements.txt
 ```
 
 ---
 
 ## Running the Simulation
 
-To run the full digital twin simulation:
+Execute the main script from the terminal:
 
 ```bash
 python digital_twin_simulation.py
 ```
 
-The simulation will:
+The script will:
 
-1. Generate architecture and manufacturing parameters
-2. Predict manufacturing defects
-3. Estimate structural performance
-4. Perform sensitivity analysis
-5. Perform reliability analysis
-6. Validate predictions against literature benchmarks
+1. Generate 3000 random architecture and process parameter sets.
+2. Predict defect states and structural performance for each configuration.
+3. Compute sensitivity (Pearson correlation) and reliability (pass rates).
+4. Validate predicted CAI strength and void fraction against literature benchmarks.
+5. Export all results (CSV, JSON, LaTeX tables) and save figures as PNG files in `digital_twin_literature_results/`.
 
 ---
 
 ## Output
 
-After running the simulation, the following outputs are generated automatically:
+After a successful run, the following outputs are available:
 
-### Figures
+| Type          | Description |
+|---------------|-------------|
+| **Figures**   | `figure_void_vs_cai.png`, `figure_defect_vs_fatigue.png`, `figure_cai_distribution.png`, `figure_sensitivity_ranking.png`, `figure_reliability_distribution.png`, `figure_parameter_distributions.png`, `figure_defect_distributions.png` |
+| **Data**      | `simulation_results.csv`, `summary_metrics.csv`, `validation_results.json` |
+| **LaTeX tables** | `latex_tables.tex` (ready for inclusion in manuscripts) |
 
-* Void fraction vs CAI strength
-* Defect severity vs fatigue knockdown
-* CAI strength distribution
-* Sensitivity ranking of parameters
-* Reliability distribution
-
-### Data Files
-
-CSV and JSON files containing:
-
-* simulation results
-* summary statistics
-* sensitivity analysis results
-* validation metrics
-
-### LaTeX Tables
-
-Publication-ready tables are exported for use in journal manuscripts.
+All outputs are placed in the folder `digital_twin_literature_results/`.
 
 ---
 
 ## Reproducibility
 
-The code in this repository reproduces the simulation workflow presented in the associated research study.
-
-All figures and datasets presented in the manuscript can be regenerated using the provided scripts and default simulation parameters.
+The code is designed to be fully reproducible. By default, the random seed is fixed (`SEED = 42`). Running the script without modifications will generate exactly the same data and figures presented in the associated paper.
 
 ---
 
 ## Citation
 
-If you use this code in your research, please cite:
+If you use this code in your research, please cite the original work:
 
-Mahin, S. H. (2026).
-*Lifecycle Digital Twin Framework for 3D Woven and Braided Composites: Linking Textile Architecture, Manufacturing Defects, and Structural Performance.*
+```bibtex
+@article{mahin2026digitaltwin,
+  title   = {Lifecycle Digital Twin Framework for 3D Woven and Braided Composites: Linking Textile Architecture, Manufacturing Defects, and Structural Performance},
+  author  = {Mahin, Shadat Hossen},
+  year    = {2026},
+  note    = {GitHub repository: \url{https://github.com/shadatmahin17/Composite}}
+}
+```
 
-GitHub repository:
-https://github.com/shadatmahin17/Composite
+Direct link to repository: [https://github.com/shadatmahin17/Composite](https://github.com/shadatmahin17/Digital-twin-3d-composite)
 
 ---
 
 ## License
 
-This project is released under the MIT License.
+This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
 
 ---
 
 ## Author
 
-**Shadat Hossen Mahin**
-Department of Textile Engineering
-Research Area: Aerospace Composite Structures
+**Shadat Hossen Mahin**  
+Department of Textile Engineering  
+Research area: Aerospace Composite Structures  
 2026
-
----
