@@ -111,7 +111,7 @@ If you use this code in your research, please cite the original work:
 }
 ```
 
-Direct link to repository: [https://github.com/shadatmahin17/Composite](https://github.com/shadatmahin17/Digital-twin-3d-composite)
+Direct link to repository: [https://github.com/shadatmahin17/Digital-twin-3d-composite](https://github.com/shadatmahin17/Digital-twin-3d-composite)
 
 ---
 
